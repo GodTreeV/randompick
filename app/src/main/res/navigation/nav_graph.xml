@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/numbersFragment">
+
+    <fragment
+        android:id="@+id/numbersFragment"
+        android:name="com.app.randompick.NumbersFragment"
+        android:label="fragment_numbers"
+        tools:layout="@layout/fragment_numbers">
+        <action
+            android:id="@+id/action_numbers_to_list"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.app.randompick.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list">
+
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.app.randompick.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+</navigation>

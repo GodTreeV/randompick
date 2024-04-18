@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        tools:context=".NumbersFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pickedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="58sp"
+            android:layout_marginTop="12dp"
+            android:text="?"
+            android:background="@drawable/shape_focus"
+            android:padding="40dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pickedTextDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:backgroundTint="?colorPrimary"
+            android:layout_marginTop="10dp"
+            android:padding="12dp"
+            android:textColor="@color/white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pickedText" />
+
+        <LinearLayout
+            android:id="@+id/inputContainer"
+            app:layout_constraintBottom_toTopOf="@id/pickBt"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.app.randompick.InterceptEditText
+                    android:id="@+id/smallInput"
+                    android:textSize="40sp"
+                    android:layout_marginHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="?colorPrimary"
+                    android:background="@drawable/et"
+                    android:inputType="numberDecimal"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Min Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.app.randompick.InterceptEditText
+                    android:id="@+id/bigInput"
+                    android:textSize="40sp"
+                    android:paddingVertical="8dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:textColor="?colorPrimary"
+                    android:background="@drawable/et"
+                    android:inputType="numberDecimal"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Max Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pickBt"
+            android:src="@drawable/baseline_auto_fix_high_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
